@@ -2,21 +2,47 @@
 <html lang="en" dir="ltr">
  <head>
    <meta charset="utf-8">
-
-
+   
     <link rel="stylesheet" type="text/css" href="Text-Animation.css">
+    <link rel="stylesheet" type="text/css" href="Button-Ripple.css">
 
     <title> CSS Button Effect </title>
  </head>
  <body>
-    <!------# Loading Effect #------>
-   
-
     <!------# Text Animation Effect #------>
    <section id="text-animation"> 
       <h2><span>You</span> will get hare <span>all</span> awesome buttons</h2>
    </section>
 
-   
- </body>
+
+    <!------# Button Ripple Effect #------>
+    <section id="ripples"> 
+      <div class="Ripple">
+         <a class="rip" href="#">Button</a>
+         <a class="rip" href="#">Button</a>
+      </div>
+   </section>
+ 
+
+    <!------# Button Ripple Effect For JS code #------>
+      <script type="text/javascript"> 
+         const buttons = document.querySelectorAll('a');
+         buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+               let x = e.clientX - e.target.offsetLeft;
+               let y = e.clientY - e.target.offsetTop;
+
+               let ripple = document.createElement('span');
+               ripple.style.left = x + 'px';
+               ripple.style.top = y + 'px';
+               this.appendChild(ripple);
+
+               setTimeout(() => {
+                  ripple.remove();
+               }, 1000);
+            })
+         })
+      </script>
+
+</body>
 </html>

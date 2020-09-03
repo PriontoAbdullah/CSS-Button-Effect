@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&displayer=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 #text-animation{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
