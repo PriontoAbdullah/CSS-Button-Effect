@@ -5,6 +5,7 @@
    
     <link rel="stylesheet" type="text/css" href="Text-Animation.css">
     <link rel="stylesheet" type="text/css" href="Button-Ripple.css">
+    <link rel="stylesheet" type="text/css" href="Button-Hover.css">
 
     <title> CSS Button Effect </title>
  </head>
@@ -22,6 +23,17 @@
          <a class="rip" href="#">Button</a>
       </div>
    </section>
+
+
+    <!------# Button Ripple Effect #------>
+    <section id="button-hover"> 
+      <div class="container"> 
+         <button class="btn btn1">Hover Me</button>
+         <button class="btn btn2">Hover Me</button>
+         <button class="btn btn3">Hover Me</button>
+         <button class="btn btn4">Hover Me</button>
+      </div>
+    </section>
  
 
     <!------# Button Ripple Effect For JS code #------>
@@ -39,7 +51,7 @@
 
                setTimeout(() => {
                   ripple.remove();
-               }, 1000);
+               }, 1000); 
             })
          })
       </script>
